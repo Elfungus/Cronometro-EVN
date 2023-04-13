@@ -1,61 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Cronómetro</title>
-    <style>
-        .cronometro {
-            font-size: 36px;
-            text-align: center;
-            margin-top: 100px;
-        }
-        .botones {
-            text-align: center;
-            margin-top: 20px;
-        }
-    </style>
+    <title>Saludo</title>
 </head>
 <body>
-    <div class="cronometro" id="cronometro">0:00:00</div>
-    <div class="botones">
-        <button onclick="iniciarCronometro()">Iniciar</button>
-        <button onclick="pausarCronometro()">Pausar</button>
-        <button onclick="detenerCronometro()">Reiniciar</button>
-    </div>
-
-    <script>
-        var cronometroId;
-        var segundos = 0;
-        var minutos = 0;
-        var horas = 0;
-
-        function iniciarCronometro() {
-            cronometroId = setInterval(actualizarCronometro, 1000);
-        }
-
-        function pausarCronometro() {
-            clearInterval(cronometroId);
-        }
-
-        function detenerCronometro() {
-            clearInterval(cronometroId);
-            segundos = 0;
-            minutos = 0;
-            horas = 0;
-            document.getElementById('cronometro').innerText = '0:00:00';
-        }
-
-        function actualizarCronometro() {
-            segundos++;
-            if (segundos === 60) {
-                segundos = 0;
-                minutos++;
-                if (minutos === 60) {
-                    minutos = 0;
-                    horas++;
-                }
-            }
-            document.getElementById('cronometro').innerText = horas + ':' + (minutos < 10 ? '0' : '') + minutos + ':' + (segundos < 10 ? '0' : '') + segundos;
-        }
-    </script>
+    <h1>¡Que onda papu!</h1>
 </body>
 </html>
